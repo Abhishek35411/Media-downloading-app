@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <form action="/submit" method="POST">
+      <input type="text" name="url" id="url" placeholder="URL here" /><br />
+      <div id="file_name">
+        <input
+          type="text"
+          name="file"
+          id="file"
+          placeholder="File name to save"
+        />
+        <select name="exe" id="exe">
+          <option value="jpg">image</option>
+          <option value="mp3">audio</option>
+          <option value="mp4">video</option>
+        </select>
+      </div>
+      <br />
+      <input id="btn" type="submit" value="Download" />
+    </form>
+  </body>
+</html>
